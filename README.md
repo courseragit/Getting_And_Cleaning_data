@@ -1,19 +1,15 @@
-Unzip the source ( https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
 
-into a folder on your local drive, typically /Users/xxxxx/Downloads/ (replace xxxxx with proper name)
 
-Put run_analysis.R to /Users/xxxxx/Downloads/UCI HAR Dataset/
+Steps to reproduce this project
+-------------------------------
 
-in RStudio: setwd("/Users/xxxx/Downloads/UCI HAR Dataset")
+1. Open the R script `run_analysis.r` using a text editor.
+2. Change the parameter of the `setwd` function call to the working directory/folder (i.e., the folder where these the R script file is saved).
+3. Run the R script `run_analysis.r`.
 
-and then: source("run_analysis.R")
 
-The above will run the R script, reading the dataset and writing these files:
+Outputs produced
+----------------
+* Tidy dataset file `DatasetHumanActivityRecognitionUsingSmartphones.txt` (tab-delimited text)
+* Codebook file `codebook.md` (Markdown)
 
-merged_clean_data.txt -- culminating in a merged data frame
-
-data_set_with_the_averages.txt -- culminating into a tidy dataset.
-
-The script normally runs for ~2 minutes, but "your mileage may vary", depending on your setup.
-
-Use data <- read.table("data_set_with_the_averages.txt") to read the file.
